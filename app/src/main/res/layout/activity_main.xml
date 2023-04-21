@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0A0A"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarformain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F30B0B"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:subtitleTextColor="#F8F6F6"
+        app:title="TakeNote"
+        app:titleTextColor="#FAF6F6" />
+
+    <HorizontalScrollView
+        android:id="@+id/Add_sh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollIndicators="none"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ln"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <Button
+                android:id="@+id/btn_home"
+                android:layout_width="60dp"
+                android:layout_height="52dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:backgroundTint="#272626"
+                android:contentDescription="@string/app_name"
+                android:foreground="@drawable/baseline_workspaces_24"
+                android:foregroundGravity="center"
+                app:iconSize="30dp" />
+
+            <Button
+                android:id="@+id/Add_btn_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:drawableLeft="@drawable/baseline_noise_control_off_24_blue"
+                android:drawablePadding="-2dp"
+                android:editable="false"
+                android:text="@string/btn_work"
+                android:textAllCaps="false"
+                android:textColor="#10AEF6"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/Add_btn_life"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:drawableLeft="@drawable/baseline_noise_control_off_24_green"
+                android:drawablePadding="-10dp"
+                android:text="@string/btn_life"
+                android:textAllCaps="false"
+                android:textColor="#D8EA29"
+                android:textSize="@dimen/btn" />
+
+            <Button
+                android:id="@+id/Add_btn_family"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:drawableLeft="@drawable/baseline_noise_control_off_24_red"
+                android:text="@string/btn_family"
+                android:textAllCaps="false"
+                android:textColor="#EF0F0F"
+                android:textSize="@dimen/btn" />
+
+            <Button
+                android:id="@+id/Add_btn_entermant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:drawableLeft="@drawable/baseline_noise_control_off_24_yellow"
+                android:drawablePadding="-2dp"
+                android:text="@string/btn_Entermant"
+                android:textAllCaps="false"
+                android:textColor="#1ABFD5"
+                android:textSize="@dimen/btn" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/FrameL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
+
+        </FrameLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/ft_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="true"
+            android:contentDescription="@string/Float"
+            android:foregroundTint="#F8F6F6"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:src="@drawable/baseline_add_24"
+            app:backgroundTint="#EF0D0D"
+            app:backgroundTintMode="src_over"
+            app:elevation="10dp"
+            app:useCompatPadding="false" />
+    </LinearLayout>
+
+</LinearLayout>

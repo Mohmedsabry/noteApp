@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#100F0F"
+    android:orientation="vertical"
+    tools:context=".AddNote">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Add_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F40B0B"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:menu="@menu/add"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:subtitle="Add new note"
+        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:subtitleTextColor="#F4F1F1" />
+
+    <EditText
+        android:id="@+id/Add_ed_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn"
+        android:backgroundTint="#8C8989"
+        android:ems="10"
+        android:fontFamily="@font/alice"
+        android:hint="@string/Title"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColorHint="#FDF9F9"
+        android:textSize="22sp"
+        android:textStyle="normal" />
+
+    <HorizontalScrollView
+        android:id="@+id/Add_sh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollIndicators="none"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ln"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <Button
+                android:id="@+id/Add_btn_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#03A9F4"
+                android:checkable="true"
+                android:text="@string/btn_work"
+                android:textAllCaps="false"
+                android:textColor="#F8F4F4"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                app:toggleCheckedStateOnClick="true" />
+
+            <Button
+                android:id="@+id/Add_btn_life"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#B4BF48"
+                android:checkable="true"
+                android:fitsSystemWindows="true"
+                android:text="@string/btn_life"
+                android:textAllCaps="false"
+                android:textColor="#F8F4F4"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                app:toggleCheckedStateOnClick="true" />
+
+            <Button
+                android:id="@+id/Add_btn_family"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#F60505"
+                android:checkable="true"
+                android:text="@string/btn_family"
+                android:textAllCaps="false"
+                android:textColor="#F8F4F4"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                app:toggleCheckedStateOnClick="true" />
+
+            <Button
+                android:id="@+id/Add_btn_entermant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:backgroundTint="#B5A72B"
+                android:checkable="true"
+                android:scrollIndicators="none"
+                android:selectAllOnFocus="false"
+                android:text="@string/btn_Entermant"
+                android:textAllCaps="false"
+                android:textColor="#F8F4F4"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                app:toggleCheckedStateOnClick="true" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_8sdp">
+
+        <TextView
+            android:id="@+id/Add_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:text="Type :"
+            android:textColor="#F3EFEF"
+            android:textSize="@dimen/_15ssp" />
+
+        <TextView
+            android:id="@+id/Add_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:textColor="#FBF3F3"
+            android:textSize="@dimen/_15ssp" />
+    </LinearLayout>
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/Add_multy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/btn"
+        android:gravity="start"
+        android:minHeight="48dp"
+        android:padding="7dp"
+        android:textColor="#E8E6E6"
+        android:textSize="@dimen/_20ssp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</LinearLayout>

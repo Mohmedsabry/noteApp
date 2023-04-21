@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TakeNote</string>
+    <string name="btn_work">Work</string>
+    <string name="btn_life">Life</string>
+    <string name="btn_family">Family</string>
+    <string name="btn_Entermant">Entermant</string>
+    <string name="Menu_delete">delete</string>
+    <string name="Float">floating btn</string>
+    <string name="Title">Title</string>
+
+</resources>
