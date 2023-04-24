@@ -3,7 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/menu_delete"
         android:icon="@drawable/baseline_delete_24"
         android:title="@string/Menu_delete"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/modifiy"
+        android:icon="@drawable/baseline_check_24"
+        android:title="modi"
         app:showAsAction="always" />
 </menu>

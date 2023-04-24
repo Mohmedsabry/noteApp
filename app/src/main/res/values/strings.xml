@@ -7,5 +7,6 @@
     <string name="Menu_delete">delete</string>
     <string name="Float">floating btn</string>
     <string name="Title">Title</string>
+    <string name="EditNote">Edit Note</string>
 
 </resources>

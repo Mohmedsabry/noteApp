@@ -5,7 +5,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteTransactionListener;
+import android.icu.text.DateFormat;
+import android.icu.text.SimpleDateFormat;
 
 
 import androidx.annotation.Nullable;
@@ -14,6 +15,7 @@ import com.example.takenote.Note;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Database extends SQLiteAssetHelper {
 
@@ -112,5 +114,20 @@ public class Database extends SQLiteAssetHelper {
             }while (c.moveToNext());
         }
         return note;
+    }
+    public int DeleteById(int id){
+        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
+        return sqLiteDatabase.delete(Tabel,""+Id+" = "+id+"",null);
+    }
+    public int ModifyById(Note note){
+        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(Type, note.getType());
+        cv.put(Title, note.getTitle());
+        cv.put(Desc, note.getDecscrption());
+        DateFormat dateFormat=new SimpleDateFormat("MMMM d YYYY");
+        note.setHistory(dateFormat.format(new Date()).toString());
+        cv.put(History, note.getHistory());
+        return sqLiteDatabase.update(Tabel,cv,""+Id+" = "+note.getId()+"",null);
     }
 }

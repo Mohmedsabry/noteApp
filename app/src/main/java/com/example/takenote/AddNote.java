@@ -5,14 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.annotation.SuppressLint;
-import android.graphics.drawable.Drawable;
 import android.icu.text.DateFormat;
 import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.PointerIcon;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,10 +39,10 @@ public class AddNote extends AppCompatActivity {
         setContentView(R.layout.activity_add_note);
         getSupportActionBar().hide();
 
-        work = findViewById(R.id.Add_btn_work);
-        life = findViewById(R.id.Add_btn_life);
-        entermant = findViewById(R.id.Add_btn_entermant);
-        family = findViewById(R.id.Add_btn_family);
+        work = findViewById(R.id.mod_btn_work);
+        life = findViewById(R.id.mod_btn_life);
+        entermant = findViewById(R.id.mod_btn_entermant);
+        family = findViewById(R.id.mod_btn_family);
         res = findViewById(R.id.Add_result);
 
         work.setOnClickListener(view -> res.setText("work"));
@@ -54,6 +52,7 @@ public class AddNote extends AppCompatActivity {
 
         dateFormat = new SimpleDateFormat("MMMM d YYYY");
         toolbar = findViewById(R.id.Add_toolbar);
+
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -78,7 +77,8 @@ public class AddNote extends AppCompatActivity {
         });
         tv = findViewById(R.id.Add_multy);
         database = new Database(this);
-        Title = findViewById(R.id.Add_ed_title);
+        Title = findViewById(R.id.modEdTitle);
+
     }
 
     @Override

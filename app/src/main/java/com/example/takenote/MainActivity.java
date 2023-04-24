@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SearchView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,6 +20,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.takenote.Database.Database;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     Button all,Work,Life,Family,Entermant;
     FloatingActionButton btn;
     ArrayList<Note>arrayList;
+    public static String IntentValue="Note";
     SearchView searchView;
     Menu menuMain;
     @SuppressLint("MissingInflatedId")
@@ -40,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbarformain);
         all = findViewById(R.id.btn_home);
-        Work = findViewById(R.id.Add_btn_work);
-        Entermant = findViewById(R.id.Add_btn_entermant);
-        Family = findViewById(R.id.Add_btn_family);
-        Life = findViewById(R.id.Add_btn_life);
+        Work = findViewById(R.id.mod_btn_work);
+        Entermant = findViewById(R.id.mod_btn_entermant);
+        Family = findViewById(R.id.mod_btn_family);
+        Life = findViewById(R.id.mod_btn_life);
         btn = findViewById(R.id.ft_btn);
         setSupportActionBar(toolbar);
 
@@ -81,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
                 n=database.SearchById(id);
                 Log.d("id",id+"");
                 Log.d("note",n.toString());
+                Intent intent = new Intent(getBaseContext(), EditNote.class);
+                intent.putExtra(IntentValue,n);
+                startActivityForResult(intent,5);
             }
         });
 

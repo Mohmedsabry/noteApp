@@ -21,7 +21,7 @@
         app:titleTextColor="#FAF6F6" />
 
     <HorizontalScrollView
-        android:id="@+id/Add_sh"
+        android:id="@+id/mod_hv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollIndicators="none"
@@ -29,7 +29,7 @@
         android:scrollbars="none">
 
         <LinearLayout
-            android:id="@+id/ln"
+            android:id="@+id/mod_Ln"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -50,7 +50,7 @@
                 app:iconSize="30dp" />
 
             <Button
-                android:id="@+id/Add_btn_work"
+                android:id="@+id/mod_btn_work"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -65,7 +65,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/Add_btn_life"
+                android:id="@+id/mod_btn_life"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -79,7 +79,7 @@
                 android:textSize="@dimen/btn" />
 
             <Button
-                android:id="@+id/Add_btn_family"
+                android:id="@+id/mod_btn_family"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -92,7 +92,7 @@
                 android:textSize="@dimen/btn" />
 
             <Button
-                android:id="@+id/Add_btn_entermant"
+                android:id="@+id/mod_btn_entermant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
