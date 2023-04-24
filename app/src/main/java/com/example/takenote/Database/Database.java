@@ -125,8 +125,7 @@ public class Database extends SQLiteAssetHelper {
         cv.put(Type, note.getType());
         cv.put(Title, note.getTitle());
         cv.put(Desc, note.getDecscrption());
-        DateFormat dateFormat=new SimpleDateFormat("MMMM d YYYY");
-        note.setHistory(dateFormat.format(new Date()).toString());
+        note.setHistory(new Date().toString());
         cv.put(History, note.getHistory());
         return sqLiteDatabase.update(Tabel,cv,""+Id+" = "+note.getId()+"",null);
     }
