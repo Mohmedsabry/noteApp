@@ -99,5 +99,18 @@ public class Database extends SQLiteAssetHelper {
         return arrayList;
     }
 
-
+    @SuppressLint("Range")
+   public Note SearchById(int id){
+        Note note=new Note();
+        SQLiteDatabase database = getReadableDatabase();
+        Cursor c = database.rawQuery("select * from "+Tabel+" where "+Id+" = "+id+" ",null);
+        if (c.moveToFirst()){
+            do {
+                note = new Note(c.getString(c.getColumnIndex(Title)),c.getString(c.getColumnIndex(Type)),
+                                c.getString(c.getColumnIndex(History)),c.getString(c.getColumnIndex(Desc)),
+                                c.getInt(c.getColumnIndex(Id)));
+            }while (c.moveToNext());
+        }
+        return note;
+    }
 }

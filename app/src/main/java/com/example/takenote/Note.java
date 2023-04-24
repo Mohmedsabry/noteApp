@@ -38,6 +38,10 @@ public class Note {
         this.type = Type;
         this.decscrption = decscrption;
     }
+
+    public Note() {
+    }
+
     public Note(String title, String type, String history, String decscrption, int id) {
         this.title = title;
         this.type = type;

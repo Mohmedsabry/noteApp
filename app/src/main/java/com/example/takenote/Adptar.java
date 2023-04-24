@@ -19,9 +19,11 @@ import java.util.Date;
 
 public class Adptar extends RecyclerView .Adapter<Adptar.Holder> implements Serializable, Parcelable {
     ArrayList<Note>arrayList;
-
-    public Adptar(ArrayList<Note> arrayList) {
+    Listener listener;
+    public Adptar(ArrayList<Note> arrayList,Listener listener)
+    {
         this.arrayList = arrayList;
+        this.listener=listener;
     }
 
     protected Adptar(Parcel in) {
@@ -82,7 +84,7 @@ public class Adptar extends RecyclerView .Adapter<Adptar.Holder> implements Seri
                 DateFormat dateFormat=new SimpleDateFormat("MMMM d YYYY");
                 holder.his.setText(dateFormat.format(new Date())+"");
             }
-
+            holder.itemView.setOnClickListener(view -> listener.OnObjectClick(arrayList.get(holder.getAdapterPosition()).getId()));
             System.out.println(arrayList.get(position).toString());
         }
     }
@@ -113,5 +115,8 @@ public class Adptar extends RecyclerView .Adapter<Adptar.Holder> implements Seri
             imageView = itemView.findViewById(R.id.rv_img);
 
         }
+    }
+    interface Listener{
+        public void OnObjectClick(int id);
     }
 }
