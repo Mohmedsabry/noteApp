@@ -8,18 +8,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbarformain"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#F30B0B"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Large"
-        app:subtitleTextColor="#F8F6F6"
-        app:title="TakeNote"
-        app:titleTextColor="#FAF6F6" />
-
     <HorizontalScrollView
         android:id="@+id/mod_hv"
         android:layout_width="match_parent"

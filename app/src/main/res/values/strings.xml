@@ -8,5 +8,6 @@
     <string name="Float">floating btn</string>
     <string name="Title">Title</string>
     <string name="EditNote">Edit Note</string>
+    <string name="Splash_screen">Take Your Note?!</string>
 
 </resources>

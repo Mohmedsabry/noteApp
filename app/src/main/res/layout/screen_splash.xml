@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7E5210"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="76dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/note"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/adamina"
+        android:padding="2dp"
+        android:text="@string/Splash_screen"
+        android:textColor="#EDEAEA"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold|italic"
+        app:emojiCompatEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

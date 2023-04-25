@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.SearchView;
 
@@ -37,16 +38,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.toolbarformain);
+
+       // toolbar = findViewById(R.id.toolbarformain);
         all = findViewById(R.id.btn_home);
         Work = findViewById(R.id.mod_btn_work);
         Entermant = findViewById(R.id.mod_btn_entermant);
         Family = findViewById(R.id.mod_btn_family);
         Life = findViewById(R.id.mod_btn_life);
         btn = findViewById(R.id.ft_btn);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
         database = new Database(this);
         arrayList=new ArrayList<>();
