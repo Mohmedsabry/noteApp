@@ -33,8 +33,9 @@
                 android:background="@drawable/btn"
                 android:backgroundTint="#272626"
                 android:contentDescription="@string/app_name"
-                android:foreground="@drawable/baseline_workspaces_24"
+                android:foreground="@drawable/home"
                 android:foregroundGravity="center"
+                android:foregroundTint="#F3EEEE"
                 app:iconSize="30dp" />
 
             <Button
